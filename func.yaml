@@ -1,0 +1,23 @@
+specVersion: 0.36.0
+name: quarkus-demo1
+runtime: quarkus
+registry: quay.io/mvinkler
+namespace: mvinkler
+created: 2024-10-24T12:06:34.285168887+02:00
+build:
+  git:
+    url: https://github.com/mvinkler/quarkus-demo1
+    revision: main
+  builder: pack
+  buildEnvs:
+  - name: BP_NATIVE_IMAGE
+    value: "false"
+  - name: BP_JVM_VERSION
+    value: "21"
+  - name: MAVEN_S2I_ARTIFACT_DIRS
+    value: target/quarkus-app
+  - name: S2I_SOURCE_DEPLOYMENTS_FILTER
+    value: lib quarkus-run.jar app quarkus
+deploy:
+  namespace: mvinkler
+  image: quay.io/mvinkler/quarkus-demo1:latest
