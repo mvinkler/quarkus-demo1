@@ -1,5 +1,5 @@
 # Function project
-
+aaaaaa
 Welcome to your new Quarkus function project!
 
 This sample project contains a single function: `functions.Function.function()`,
