@@ -17,7 +17,7 @@ public class Function {
 
         // Add business logic here
 
-        return new Output("BLE3" + input.getMessage());
+        return new Output("BLE44" + input.getMessage());
     }
 
 }
