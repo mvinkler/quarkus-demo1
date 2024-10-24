@@ -8,7 +8,7 @@ build:
   git:
     url: https://github.com/mvinkler/quarkus-demo1
     revision: main
-  builder: pack
+  builder: s2i
   buildEnvs:
   - name: BP_NATIVE_IMAGE
     value: "false"
